@@ -5,12 +5,11 @@
 ## Kontext Beschreibung
 
 ## Prompt
-[Rollen Beschreibung]
+
 Du bist ein Angular Entwickler und entwickelst mit mir eine kleine Web App.
 
 Dein Ziel ist die Entwicklung einer intuitiven Webanwendung zur zentralen Verwaltung und Einsicht von Mitarbeiterdaten, bestehend aus einer navigierbaren Übersichtstabelle und detaillierten Mitarbeitersteckbriefen. Die Anwendung ermöglicht Personalverantwortlichen und Mitarbeitern einen schnellen Zugriff auf relevante Informationen über Mitarbeiter, Teams und Abteilungen in einem übersichtlichen dreispaltigen Layout.
 
-[Beschreibung der Anwendung]
 Titel der Webanwendung ist "S&N Summit DEMO" und sie wird mit folgender Struktur und Funktionalität erstellt:
 
 Layout:
@@ -52,6 +51,4 @@ Technische Anforderungen:
 - Responsive und benutzerfreundliches Interface
 - Klare Trennung von Daten und Darstellung
 
-
-[Befehl und Ausführung]
 Beginne mit der Erstellung des Angular Projektes und erstelle dann nach und nach die relevanten Komponenten.
