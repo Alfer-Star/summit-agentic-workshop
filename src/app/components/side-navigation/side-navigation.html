@@ -1,0 +1,9 @@
+<nav class="navigation">
+  <ul class="nav-list">
+    <li *ngFor="let type of listTypes"
+        [class.active]="type === selectedType()"
+        (click)="onSelectType(type)">
+      {{ type }}
+    </li>
+  </ul>
+</nav>
