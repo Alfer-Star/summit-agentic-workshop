@@ -1,0 +1,249 @@
+openapi: 3.0.3
+info:
+  title: DummyJSON Users API
+  description: OpenAPI Spec für DummyJSON-Users Endpoints gemäß https://dummyjson.com/docs/users
+  version: 1.0.0
+servers:
+  - url: https://dummyjson.com
+paths:
+  /users:
+    get:
+      summary: Alle Nutzer abrufen
+      parameters:
+        - in: query
+          name: limit
+          schema:
+            type: integer
+        - in: query
+          name: skip
+          schema:
+            type: integer
+        - in: query
+          name: select
+          schema:
+            type: string
+        - in: query
+          name: sortBy
+          schema:
+            type: string
+        - in: query
+          name: order
+          schema:
+            type: string
+            enum: [asc, desc]
+      responses:
+        "200":
+          description: Liste von Nutzern
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  users:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/User"
+                  total:
+                    type: integer
+                  skip:
+                    type: integer
+                  limit:
+                    type: integer
+    post:
+      summary: Neuen Nutzer erstellen (simuliert)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UserInput"
+      responses:
+        "201":
+          description: Nutzer erstellt
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+  /users/{id}:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: integer
+    get:
+      summary: Einzelnen Nutzer abrufen
+      responses:
+        "200":
+          description: Erfolgreiche Antwort
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "404":
+          description: Nicht gefunden
+    put:
+      summary: Nutzer vollständig aktualisieren (simuliert)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UserInput"
+      responses:
+        "200":
+          description: Aktualisierter Nutzer
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+    patch:
+      summary: Nutzer teilweise aktualisieren (simuliert)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UserInputPartial"
+      responses:
+        "200":
+          description: Aktualisierter Nutzer
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+    delete:
+      summary: Nutzer löschen (simuliert)
+      responses:
+        "200":
+          description: Erfolg
+components:
+  schemas:
+    Address:
+      type: object
+      properties:
+        address: { type: string }
+        city: { type: string }
+        state: { type: string }
+        stateCode: { type: string }
+        postalCode: { type: string }
+        coordinates:
+          type: object
+          properties:
+            lat: { type: number }
+            lng: { type: number }
+        country: { type: string }
+    Hair:
+      type: object
+      properties:
+        color: { type: string }
+        type: { type: string }
+    Bank:
+      type: object
+      properties:
+        cardExpire: { type: string }
+        cardNumber: { type: string }
+        cardType: { type: string }
+        currency: { type: string }
+        iban: { type: string }
+    CompanyAddress:
+      type: object
+      properties:
+        address: { type: string }
+        city: { type: string }
+        state: { type: string }
+        stateCode: { type: string }
+        postalCode: { type: string }
+        coordinates:
+          type: object
+          properties:
+            lat: { type: number }
+            lng: { type: number }
+        country: { type: string }
+    Company:
+      type: object
+      properties:
+        department: { type: string }
+        name: { type: string }
+        title: { type: string }
+        address:
+          $ref: "#/components/schemas/CompanyAddress"
+    Crypto:
+      type: object
+      properties:
+        coin: { type: string }
+        wallet: { type: string }
+        network: { type: string }
+    User:
+      type: object
+      properties:
+        id: { type: integer }
+        firstName: { type: string }
+        lastName: { type: string }
+        maidenName: { type: string }
+        age: { type: integer }
+        gender: { type: string }
+        email: { type: string }
+        phone: { type: string }
+        username: { type: string }
+        birthDate: { type: string, format: date }
+        image: { type: string }
+        bloodGroup: { type: string }
+        height: { type: number }
+        weight: { type: number }
+        eyeColor: { type: string }
+        hair:
+          $ref: "#/components/schemas/Hair"
+        ip: { type: string }
+        address:
+          $ref: "#/components/schemas/Address"
+        macAddress: { type: string }
+        university: { type: string }
+        bank:
+          $ref: "#/components/schemas/Bank"
+        company:
+          $ref: "#/components/schemas/Company"
+        ein: { type: string }
+        ssn: { type: string }
+        userAgent: { type: string }
+        crypto:
+          $ref: "#/components/schemas/Crypto"
+        role:
+          type: string
+          enum: [admin, moderator, user]
+    UserInput:
+      type: object
+      properties:
+        firstName: { type: string }
+        lastName: { type: string }
+        maidenName: { type: string }
+        age: { type: integer }
+        gender: { type: string }
+        email: { type: string }
+        phone: { type: string }
+        username: { type: string }
+        birthDate: { type: string, format: date }
+        image: { type: string }
+        bloodGroup: { type: string }
+        height: { type: number }
+        weight: { type: number }
+        eyeColor: { type: string }
+        hair:
+          $ref: "#/components/schemas/Hair"
+        ip: { type: string }
+        address:
+          $ref: "#/components/schemas/Address"
+        macAddress: { type: string }
+        university: { type: string }
+        bank:
+          $ref: "#/components/schemas/Bank"
+        company:
+          $ref: "#/components/schemas/Company"
+        crypto:
+          $ref: "#/components/schemas/Crypto"
+        role:
+          type: string
+          enum: [admin, moderator, user]
+    UserInputPartial:
+      allOf:
+        - $ref: "#/components/schemas/UserInput"
