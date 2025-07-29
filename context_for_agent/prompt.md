@@ -1,14 +1,17 @@
-Erstelle mir die WebApplication mit den im Folgenden beschrieben Features.
+Erstelle mir die WebApplication mit den folgendenen Features.
 
-Das beigefügte Bild ist ein Prototyp. Orientiere dich an dem Design. Hier sind User Storys zu den Anwendern und Funktionsbeschreibungen:  [@file user_storys] 
-Gegen die Akzeptanzkriterien werden später test geschrieben.
-
-
-Beschreibung des Prototypen: [@file prototype_description] 
+Das beigefügte Bild ist ein Prototyp. Orientiere dich an dem Design. Hier sind User Storys mit Nutzern, einer Funktionsbeschreibungen und Akzeptanzkriterien:  [@file user_storys.md] 
 
 
-Beginne mit der Erstellung der 3 Haupt Komponenten, verwende dazu das Angular cli Befehlen. Das Angualr cli ist lokal im Projekt installiert. Du befindest dich in einer leere Angualr Applikation bitte erweitere sie. [@Code App einfügen] 
+Beschreibung des Prototypen: [@file prototype_description.md] 
 
-Leite dir sinvolle Namen für die Komponeten ab und erstelle die Logik ab. Arbeite mit selbst erstellen Dumd Daten. Und erstelle nach eigenen Ermessen weitere Kinder Componenten, Directiven, Service oder Pipes.
 
-Fange nun an mit der Erstellung.
+Beginne mit der Erstellung der 3 Hauptkomponenten, verwende dazu das Angular Cli Befehlen. Das Angular cli ist lokal im Projekt installiert. Du befindest dich in einer leeren Angular Applikation bitte erweitere sie: [@Code App einfügen] 
+
+In [@ dummy-json-user-api.yml] ist eine OpenAPi Beschreibung der Schnittstelle. Die API gibt ein komplexeres Modell zurück als benötigt wird. Implementiere als Modell nur die zu benötigst.
+
+Leite dir sinvolle Namen für die Komponenten ab und erstelle die Logik. Erstelle sinnvolle Modelle. Und erstelle nach eigenen Ermessen weitere Kinder Componenten, Directiven, Service oder Pipes.
+
+Beginne nun an mit der Erstellung der Application!
+
+

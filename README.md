@@ -1,19 +1,29 @@
 # SummitAgenticWorkshop
+Dieses Projekt ist ein Workshop zur demonstration von KI Agenten aus dem S&N Summit 2025.
+
+Die Workshop Aufgabe ist beschrieben in [Aufgaben Beschreibung ReadME](context_for_agent/README.md)
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.1.
+
+## Setup
+Folgende Vorraussetzung muss erfüllt sein.
+- Node.js installiert?
+- VS Code mit Continue Erweiterung (Siehe Empfohlene Extension)
+- ChatModel Claude 3.5 Sonnet Key in Continue eingerichtet
+[Hinzufügen des Claude KEYS in continue](README.md)
 
 ## Development server
 
 To start a local development server, run:
 
 ```bash
-ng serve
+npm start
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
 ## Code scaffolding
-
+In case you have installed an Angular CLI globally, else you need to put an "npx" in Front of the Command.
 Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
 ```bash
