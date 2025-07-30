@@ -22,13 +22,15 @@ Achte darauf, der Agent könnte nach einer Weile abbrechen könnte und durch dei
 
 **Vorgehen was generiert wird:**
 In diesen  Ansatz wollen wir die Kontrolle darüber übernehmen, wie die KI vorgeht.   
-(Ergänze den Prompt) Weise dazu den Agenten am Ende des Prompts in *prompt.md* an Schritt für Schritt vorzugehen und auf deine Anwiesung zu warten, was bzw. welcher Schritt als nächstes erstellt wird.
-Beende deinen Prompt mit dem was der Agent als erstes generieren soll z.B. das Layout.
 
-Hier ist ein Vorgehens Vorschlag.  
+
+Hier ist ein Vorschlag.  
 1. Layout
 2. (Datenmodel von API ableiten)
-3. Komponenten (Menü, Tablle und Summary (Steckbrief))
+3. Komponenten 
+    - Seitenmenü Departments
+    - Tabelle 
+    - Mitarbeitersteckbrief
 4. Tabelle an Backend anbinden
 
 
