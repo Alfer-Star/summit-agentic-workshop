@@ -16,30 +16,28 @@ Erstellung eines UI zur Einsicht von Mitarbeiterdaten, bestehend aus einer navig
 
 Wähle einen Ansatz.
 
-**Alles in einem Durchlaufen - Agent entscheiden lassen:**
-Der Prompt in *prompt.md* ist dafür gedacht den Agenten die Applikation in einen Durchlaufen zu generieren.
-Achte darauf, der Agent könnte nach einer Weile abbrechen könnte und durch deine Anweisung vorangetrieben werden muss.
+**Nummer 1: APP in einem Durchlauf Prompt Ansatz**
+Der Prompt in [Prompt](prompt.md) ist dafür gedacht den Agenten die Applikation in einen Durchlaufen zu generieren. Du lehnst dich zurück und bestätigst was der Agent generiert.  
+Achte darauf, der Agent könnte nach einer Weile abbrechen. Dann muss ihn Anweisen den nächsten Schritt umzusetzen
 
-**Vorgehen was generiert wird:**
-In diesen  Ansatz wollen wir die Kontrolle darüber übernehmen, wie die KI vorgeht.   
+**Step by Stepp Prompt Ansatz:**
+In diesen  Ansatz wollen wir die Kontrolle darüber übernehmen, welchen Schritt Agent umsetzt. Hier ist der Prompt vorbereitet: [text](prompt_step_by_step.md)  
 
-
-Hier ist ein Vorschlag.  
-1. Layout
-2. (Datenmodel von API ableiten)
-3. Komponenten 
+Mögliche Schritte.  
+1. 3 Spalten Layout erstellen
+2. Datenmodel von API ableiten iund API Service erstellen
+3. Komponenten Logik erstellen 
     - Seitenmenü Departments
     - Tabelle 
     - Mitarbeitersteckbrief
-4. Tabelle an Backend anbinden
-
+4. Tests schreiben
 
 ### Kontext
-Definierte Anforderungen andProduktziels.
+Hier sind die Anforderungen an das Produktziels beschrieben.
 
 Das Bild des Prototypen */prototype.png*  
-![Prototype Mitarbeiter Verwaltung mit 3 Spaltigen Layout, Branch Mitarbeiter Tabelle und Steckbrief](prototype.png)
-Beschreibung des Prototypen: 
+![Prototype Mitarbeiter Verwaltung mit 3 Spaltigen Layout, Branch Mitarbeiter Tabelle und Steckbrief](prototype.png)  
+Beschreibung des Prototypen:[Claude Beschreibung des Prototypen](prototype_description.md)  
 
-3 User Stories mit Akzeptanzkriterein [text](user_storys.md)  
-API Spezifikation [APi Spezifikation](dummy-json-user-api.yml)  
+3 User Stories mit Akzeptanzkriterien [Markdown mit User Stories](user_storys.md)  
+Dummy JSON User OpenAPI Spezifikation [Api Spezifikation](dummy-json-user-api.yml)  
